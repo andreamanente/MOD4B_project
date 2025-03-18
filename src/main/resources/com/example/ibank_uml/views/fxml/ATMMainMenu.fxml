@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="15" stylesheets="@styles.css"
+      xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/17"
+      fx:controller="com.example.ibank_uml.controllers.ATMMainMenuController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label fx:id="welcomeLabel" text="Welcome to ATM"
+           style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <Label text="Select an operation:"
+           style="-fx-font-size: 16px; -fx-text-fill: #01B4F6;" />
+
+    <Button fx:id="checkBalanceButton" text="Check Balance"
+            onAction="#handleCheckBalance" styleClass="menu-button" />
+
+    <Button fx:id="depositButton" text="Deposit"
+            onAction="#handleDeposit" styleClass="menu-button" />
+
+    <Button fx:id="withdrawButton" text="Withdraw"
+            onAction="#handleWithdraw" styleClass="menu-button" />
+
+    <VBox alignment="CENTER" spacing="20">
+        <padding>
+            <Insets top="20" />
+        </padding>
+        <Button fx:id="logoutButton" text="Logout"
+                onAction="#handleLogout" styleClass="logout-button" />
+    </VBox>
+</VBox>
